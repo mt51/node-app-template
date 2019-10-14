@@ -1,0 +1,11 @@
+{
+  "watch": [
+    "./app/*"
+  ],
+  "ignore": [
+    "./app/dist/*"
+  ],
+  "env": {
+    "NODE_ENV": "dev"
+  }
+}

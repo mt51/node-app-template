@@ -1,0 +1,31 @@
+{
+  "name": "luffy",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.8.2",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-view": "^2.1.3",
+    "minimist": "^1.2.0",
+    "nunjucks": "^3.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "nodemon": "^1.19.3"
+  },
+  "scripts": {
+    "start": "node ./app/app.js",
+    "serve": "nodemon ./app/app.js --env dev",
+    "pre": "cd client && npm run build",
+    "dev": "cd ./client && npm run dev"
+  }
+}

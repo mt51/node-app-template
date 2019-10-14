@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["dom", "es2017", "es2018.promise"],
+    "jsx": "react",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "sourceRoot": ".",
+    "downlevelIteration": true,
+    // "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "fns/*": ["./fns/*"],
+      "components/*": ["./components/*"],
+      "shared/*": ["./shared/*"],
+      "definitions/*": ["../definitions/*"],
+    },
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/@youzan-types"
+    ],
+    "outDir": "./dist"
+  },
+  "include": ["."],
+  "exclude": ["webpack", "scripts"]
+}
