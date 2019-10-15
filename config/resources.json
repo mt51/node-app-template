@@ -1,7 +1,10 @@
 {
   "js": {
-    "about/app01_996fe15b3de486565faa.js": "about/app01_996fe15b3de486565faa.js",
-    "about/app02_ae3cbd548e264a7c1c6a.js": "about/app02_ae3cbd548e264a7c1c6a.js",
-    "home_d8eeeabc5d63e554762c.js": "home_d8eeeabc5d63e554762c.js"
+    "about/app01": "about/app01_d702823fd5b1a5501aef.js",
+    "about/app02": "about/app02_cfc79698579d4c7aaab8.js",
+    "home": "home_ef3b3be6bef95bfa77ce.js"
+  }, 
+  "css": {
+    "home": "home_90357b823cab773075d9.css"
   }
 }
