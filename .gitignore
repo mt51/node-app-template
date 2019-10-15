@@ -4,6 +4,7 @@ yarn-error.log*
 
 # Dependency directories
 node_modules/
+.vscode/
 
 # Typescript v1 declaration files
 typings/
@@ -27,3 +28,4 @@ typings/
 
 .DS_Store
 package-lock.json
+app/dist/
