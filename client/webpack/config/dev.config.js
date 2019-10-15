@@ -8,6 +8,13 @@ const config = {
     host: '127.0.0.1',
     compress: true,
     port: 3001,
+    stats: {
+      modules: false,
+      children: false,
+      performance: false,
+      entrypoints: false,
+      colors: true,
+    },
   },
   watch: true,
 }

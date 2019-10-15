@@ -4,10 +4,10 @@ function isDev() {
 }
 
 function getAppRoot() {
-  return path.resolve(__dirname, '../../pages')
+  return path.resolve(__dirname, '../../pages');
 }
 
 module.exports = {
   isDev,
   getAppRoot
-}
+};
