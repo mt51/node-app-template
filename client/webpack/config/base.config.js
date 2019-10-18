@@ -6,6 +6,7 @@ const getBabelRule = require('../rules/babel');
 const getTypeScriptRule = require('../rules/typescript');
 const { getCssRule } = require('../rules/css');
 const { getScssRule, getScssModuleRule } = require('../rules/scss');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 const isDev = helper.isDev();
 
@@ -34,7 +35,9 @@ const baseConfig = {
     }),
     new MiniCssExtractPlugin({
       filename: isDev ? '[name].css' : '[name]_[contenthash].css'
-    })
+    }),
+    new HardSourceWebpackPlugin(),
+    new webpack.NoEmitOnErrorsPlugin()
   ],
   optimization: {
     noEmitOnErrors: true,

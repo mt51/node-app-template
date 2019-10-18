@@ -1,5 +1,5 @@
-const path = require('path');
 const merge = require('webpack-merge');
+const FriendlyErrorsWebpackPlugins = require('friendly-errors-webpack-plugin');
 const baseDevConfig = require('./base.dev.config');
 const scanEntries = require('../utils/scan-entries');
 const helpers = require('../utils/helper');
@@ -15,8 +15,12 @@ const config = {
       entrypoints: false,
       colors: true,
     },
+    quiet: true,
   },
   watch: true,
+  plugins: [
+    new FriendlyErrorsWebpackPlugins(),
+  ]
 }
 
 config.entry = scanEntries(helpers.getAppRoot());

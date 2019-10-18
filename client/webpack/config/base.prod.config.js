@@ -5,8 +5,17 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const defaultPreset = require('cssnano-preset-default');
 const autoprefixer = require('autoprefixer');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const baseConfig = require('./base.prod.config');
 const ResourceConfigGeneratePlugin = require('../plugins/webpack-resource-config-generate-plugin');
+
+const isAnalyze = process.argv.indexOf('analyze') > -1;
+
+const plugins = [new ResourceConfigGeneratePlugin()];
+
+if (isAnalyze) {
+  plugins.push(new BundleAnalyzerPlugin());
+}
 
 module.exports = merge.smart(baseConfig, {
   mode: 'production',
@@ -29,11 +38,27 @@ module.exports = merge.smart(baseConfig, {
           preset: cssnanoProdPreset,
         }
       }),
-    ]
+    ],
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        commons: {
+          chunks: 'all',
+          name: "commons",
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+        vendors: {
+          chunks: 'initial',
+          name: 'vendors',
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        }
+      }
+    }
   },
-  plugins: [
-    new ResourceConfigGeneratePlugin()
-  ]
+  plugins,
 });
 
 function cssnanoProdPreset(opt = {}) {
