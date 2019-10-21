@@ -34,7 +34,8 @@ const baseConfig = {
       'NODE_ENV': process.env.NODE_ENV,
     }),
     new MiniCssExtractPlugin({
-      filename: isDev ? '[name].css' : '[name]_[contenthash].css'
+      filename: isDev ? '[name].css' : '[name]_[contenthash].css',
+      chunkFilename: isDev ? '[name].css' : '[name]_[contenthash].css',
     }),
     new HardSourceWebpackPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
