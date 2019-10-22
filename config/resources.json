@@ -1,10 +1,11 @@
 {
   "js": {
-    "about/app01": "about/app01_d702823fd5b1a5501aef.js",
-    "about/app02": "about/app02_cfc79698579d4c7aaab8.js",
-    "home": "home_ef3b3be6bef95bfa77ce.js"
+    "vendors": "vendors_065365d6ed6cba4e5952.js",
+    "about/app01": "about/app01_72c5a1e8c0b7d6a0ebff.js",
+    "about/app02": "about/app02_11baa6ff6a526e92e3c5.js",
+    "home": "home_6f11b6fd2ad1842f0bf5.js"
   }, 
   "css": {
-    "home": "home_90357b823cab773075d9.css"
+    "home": "home_838d336bb9897019181e.css"
   }
 }

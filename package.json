@@ -20,13 +20,16 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
+    "hard-source-webpack-plugin": "^0.13.1",
     "nodemon": "^1.19.3",
+    "postcss-loader": "^3.0.0",
     "prettier": "^1.18.2"
   },
   "scripts": {
     "start": "node ./app/app.js",
     "serve": "nodemon ./app/app.js --env dev",
-    "pre": "cd client && npm run build",
-    "dev": "cd ./client && npm run dev"
+    "pre": "cd ./client/webpack && npm run build",
+    "dev": "cd ./client/webpack && npm run dev",
+    "analyze": "cd ./client/webpack  && npm run build:analyze"
   }
 }

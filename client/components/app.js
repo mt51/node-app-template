@@ -5,7 +5,7 @@ export default class App extends React.PureComponent {
     return (
       <div>
         <p>
-          <div>index</div>
+          <div>getModulePostOrderIndex</div>
         </p>
       </div>
     );

@@ -2,3 +2,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* 黑色的繁花似锦的非会计核算会计的 */
+
+.test {
+  display: flex;
+  justify-content: flex-end;
+}
