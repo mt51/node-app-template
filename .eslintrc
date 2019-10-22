@@ -1,0 +1,52 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": ["eslint:recommended", "google", "plugin:prettier/recommended"],
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "window": true,
+    "document": true,
+    "navigator": true,
+    "location": true
+  },
+  "rules": {
+    "max-len": [
+      2,
+      {
+        "code": 120,
+        "tabWidth": 2,
+        "ignoreUrls": true,
+        "ignorePattern": "^\\s*var\\s.+=\\s*require\\s*\\("
+      }
+    ],
+    "require-jsdoc": 0,
+    "react/jsx-boolean-value": 2,
+    "react/jsx-closing-bracket-location": 1,
+    "react/jsx-indent-props": [2, 4],
+    "react/jsx-key": 2,
+    "react/jsx-max-props-per-line": [1, {"maximum": 1}],
+    "react/jsx-no-duplicate-props": 2,
+    "react/jsx-no-literals": 0,
+    "react/jsx-no-undef": 1,
+    "react/jsx-sort-props": 2,
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 2,
+    "react/no-danger": 0,
+    "react/no-direct-mutation-state": 2,
+    "react/no-multi-comp": 2,
+    "react/no-unknown-property": 2,
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 2,
+    "react/self-closing-comp": 0,
+    "react/sort-comp": 2,
+  }
+}
