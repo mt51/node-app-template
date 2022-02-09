@@ -42,7 +42,7 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2",
     "webpack-merge": "^4.2.2",
-    "yarn": "^1.19.0"
+    "yarn": "^1.22.0"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/dev.config.js --mode development",
